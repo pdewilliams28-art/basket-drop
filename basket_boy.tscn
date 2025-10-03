@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bblb56y25jy87"]
+
+[ext_resource type="Texture2D" uid="uid://jdyokfqvd6yu" path="res://Fruits/Baskety.png" id="1_5mfvc"]
+[ext_resource type="Script" path="res://basket_boy.gd" id="1_knkwm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6og31"]
+radius = 101.178
+
+[node name="BasketBoy" type="Area2D"]
+script = ExtResource("1_knkwm")
+speed = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5mfvc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6og31")
