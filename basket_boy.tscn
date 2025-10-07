@@ -7,11 +7,13 @@
 radius = 101.178
 
 [node name="BasketBoy" type="Area2D"]
+position = Vector2(500, 500)
 script = ExtResource("1_knkwm")
-speed = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5mfvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6og31")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

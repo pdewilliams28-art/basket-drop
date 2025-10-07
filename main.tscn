@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwnigy13mgsc"]
+[gd_scene load_steps=5 format=3 uid="uid://bwnigy13mgsc"]
 
 [ext_resource type="Texture2D" uid="uid://cx2jm6y2cj3mp" path="res://Background/istockphoto-1128211656-612x612.jpg" id="1_w6t0i"]
 [ext_resource type="Script" path="res://main.gd" id="2_n74ed"]
+[ext_resource type="PackedScene" uid="uid://bblb56y25jy87" path="res://basket_boy.tscn" id="3_g4l3m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x1bp"]
 size = Vector2(1142.5, 20)
@@ -28,6 +29,8 @@ metadata/_edit_lock_ = true
 position = Vector2(579.75, 777)
 shape = SubResource("RectangleShape2D_3x1bp")
 metadata/_edit_lock_ = true
+
+[node name="BasketBoy" parent="." instance=ExtResource("3_g4l3m")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
